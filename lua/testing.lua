@@ -3,7 +3,6 @@ vim.pack.add({
     'https://github.com/nvim-lua/plenary.nvim',
     'https://github.com/antoinemadec/FixCursorHold.nvim',
     'https://github.com/nvim-neotest/neotest',
-    'https://github.com/nvim-neotest/neotest-go',
     'https://github.com/fredrikaverpil/neotest-golang',
 })
 

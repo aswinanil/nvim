@@ -34,7 +34,8 @@ vim.diagnostic.config {
 
     -- Can switch between these as you prefer
     virtual_text = true, -- Text shows up at the end of the line
-    virtual_lines = { current_line = true }, -- Text shows up underneath the line, with virtual lines
+    virtual_lines = false, -- Text shows up underneath the line, with virtual lines
+    -- virtual_lines = { current_line = true }, -- Text shows up underneath the line, with virtual lines
 
     -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
     jump = {
@@ -47,3 +48,8 @@ vim.diagnostic.config {
         end,
     },
 }
+
+-- After cmd, type `gra` with cursor over inactive plugin to delete
+vim.api.nvim_create_user_command('ViewPlugins', function()
+    vim.pack.update(nil, { offline = true })
+end, { desc = "View all plugins" })
